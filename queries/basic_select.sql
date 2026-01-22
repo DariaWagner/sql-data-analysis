@@ -1,10 +1,13 @@
-SELECT *FROM kunde;
+-- Basic SELECT queries for data analysis
 
-SELECT kunde_id, land
-FROM kunde
-WHERE land = "Deutschland";
+SELECT *
+FROM customers;
 
-SELECT land, COUNT(*) AS anzahl_kunden
-FROM kunde
-GROUP BY land
-ORDER BY anzahl_kunden DESC;
+SELECT customer_id, country
+FROM customers
+WHERE country = 'Germany';
+
+SELECT country, COUNT(*) AS total_customers
+FROM customers
+GROUP BY country
+ORDER BY total_customers DESC;
